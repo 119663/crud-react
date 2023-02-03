@@ -1,0 +1,140 @@
+.App {
+  text-align: center;
+  flex-direction: column;
+
+}
+.Form{
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.btn-submit{
+  /* background: #c6cfdc;
+  border: none;
+  padding: 20px;
+  flex-grow: 1;
+  color: #5c7698;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  width: 200; */
+  width: 300px;
+  font-size: 18pt;
+  height: 50px;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 1;
+  background: #00308F;
+  position: absolute;
+  bottom: 100px;
+  right: 480px;
+}
+.name{
+  width: 600px;
+  font-size: 18pt;
+  height: 50px;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+
+
+}
+.emailA{
+  width: 600px;
+  font-size: 18pt;
+  height: 50px;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  size: 10;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+}
+.number{
+  width: 600px;
+  font-size: 18pt;
+  height: 50px;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+}
+.password{
+  width: 600px;
+  font-size: 18pt;
+  height: 50px;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+}
+.passwordA{
+  width: 600px;
+  font-size: 18pt;
+  height: 50px;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
