@@ -3,8 +3,11 @@ import './App.css';
 import { Button, TextField, Form } from '@mui/material';
 import { useState } from "react";
 import ReactDOM from 'react-dom/client';
+// import { auth } from './firebase';
 // import { app } from './firebase-config';
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth' ;
+// import { async } from '@firebase/util';
+
 
 
 function App() {
@@ -15,16 +18,28 @@ function App() {
   const [password, setPassword] = useState("");
 
 
-  const handleSubmit = () =>{
-  getAuth
-  .createUserWithEmailAndPassword(handleSubmit, email, password, name, number)
-  .then(userCredentials => {
+  // const handleSubmit = () =>{
+  // getAuth
+  // .createUserWithEmailAndPassword(handleSubmit, email, password, name, number)
+  // .then(userCredentials => {
+  //   const user = userCredentials.user;
+  //   console.log('Register with:',user.email);
+  // })
+  // .catch(error => alert(error.message))
+  // }
+
+  const handleSubmit = getAuth();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault()
+  createUserWithEmailAndPassword(handleSubmit, email,password)
+  .then((userCredentials) => {
     const user = userCredentials.user;
     console.log('Register with:',user.email);
   })
-  .catch(error => alert(error.message))
-  }
-
+  .catch((error) => {
+    alert(error.message)
+    });
+  
   return (
     <div className="App">
       <h1> CRUD </h1>
@@ -51,16 +66,22 @@ function App() {
         onChange={(e) => setPhoneNumber(e.target.value)}
         maxLength={20} />
 
-        <input class="password" 
+        <input class="passwordB" 
         type="password" 
         placeholder="Enter your password here" 
         required
         onChange={(e) => setPassword(e.target.value)}
         maxLength={20} />
-        <input class="passwordA" type="passwordA" placeholder="Enter your confirm password here" maxLength={20} />
+        <input class="passwordA" 
+        type="password" 
+        placeholder="Enter your confirm password here" 
+        maxLength={20} />
 
       {/* </Form> */}
-      <Button class="btn-submit" onclick={handleSubmit}>Register</Button>
+      <Button class="btn-submit" 
+       onclick={handleSubmit}>
+       Register
+      </Button>
       </div>
     </div>
   );
